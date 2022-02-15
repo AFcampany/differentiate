@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+function differentiate(s) {
+    if(Number(s)+ Infinity) return '0'
+    if (s =="-x") return '-1'
+    if (s == 'x') return '1'
+    if (s[s.length-1] == 'x') return `${parseInt(s)}`
+    if (s.indexOf("^2")!= -1) return s[0]!='x' ? s.indexOf("-x")== -1 ? `${2*parseInt(s)}x`:
+       '-2x' :
+       '2x'
+    const arr = s.split('x^')
+    console.log(arr)
+    return Number(arr[0]) ? `${arr[0]*arr[1]}x^${arr[1]-1}` :
+     arr[0]!='-' ? s.indexOf('-1')== s.length-2 ? '-x^-2' :
+      `${arr[1]}x^${arr[1]-1}` :
+       s.indexOf('-1')== s.length-2 ? 'x^-2':`${-arr[1]}x^${arr[1]-1}`
+}
+
+if (Infinity) if (Infinity) console.log(0); console.log(1) 
+
+let s = "-x^-10"
+let arr = s.split("x^")
+console.log(s.indexOf('-1'))
+console.log(s.length-2)
+console.log(differentiate('-x^-10'))
+
+
+
+
+
+</script>
+</body>
+</html>
