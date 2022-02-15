@@ -14,7 +14,7 @@ function differentiate(s) {
     if (s =="-x") return '-1'
     if (s == 'x') return '1'
     if (s[s.length-1] == 'x') return `${parseInt(s)}`
-    if (s.indexOf("^2")!= -1) return s[0]!='x' ? s.indexOf("-x")== -1 ? `${2*parseInt(s)}x`:
+    if (s.indexOf("^2") == s.length-2) return s[0]!='x' ? s.indexOf("-x")== -1 ? `${2*parseInt(s)}x`:
        '-2x' :
        '2x'
     const arr = s.split('x^')
